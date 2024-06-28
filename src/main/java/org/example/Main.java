@@ -13,9 +13,10 @@ class Hotelreservation
     String start_week;
     String end_week;
     long week_price;
+    double ratings;
 
 
-    Hotelreservation(String Name, long Hotel_Regular_Price, String Start_Date , String End_Date, String start_week, String end_week, long week_price)
+    Hotelreservation(String Name, long Hotel_Regular_Price, String Start_Date , String End_Date, String start_week, String end_week, long week_price , double Ratings)
     {
         this.name = Name;
         this.hotel_Regular_Price = Hotel_Regular_Price;
@@ -24,6 +25,7 @@ class Hotelreservation
         this.start_week = start_week;
         this.end_week = end_week;
         this.week_price = week_price;
+        this.ratings = Ratings;
     }
 
     @Override
@@ -36,6 +38,7 @@ class Hotelreservation
         System.out.println("The Week Date start of the Hotel is : " +start_week);
         System.out.println("The Week end Date of the Hotel is : " +end_week);
         System.out.println("The Weekend Price of an Hotel is : " + week_price);
+        System.out.println("The Ratings are" + ratings);
 
         return "";
     }
@@ -66,10 +69,10 @@ class Hotelreservation
          }
          return name;
      }
-     static Boolean addHotel(String name, long hotel_Regular_Price,String start_date,String end_date, String start_week , String end_week , long week_price)
+     static Boolean addHotel(String name, long hotel_Regular_Price,String start_date,String end_date, String start_week , String end_week , long week_price , double ratings)
      {
 
-         Hotelreservation hot = new Hotelreservation(name, hotel_Regular_Price, start_date, end_date,start_week , end_week , week_price );
+         Hotelreservation hot = new Hotelreservation(name, hotel_Regular_Price, start_date, end_date,start_week , end_week , week_price ,ratings);
          hotelreservationList.add(hot);
          if(name.equals(hot.name) && hotel_Regular_Price == hot.hotel_Regular_Price) {
              return true;
@@ -82,10 +85,11 @@ class Hotelreservation
      public static void main(String [] args)
      {
          Main m = new Main();
-         m.addHotel("Radisson Blu",30000,"20-may-2002","21-july-2002" ,"26-may-2002","27-may-2002",30000);
-         m.addHotel("InterContinental Hotels & Resorts",6500,"20-may-2002","21-july-2002","26-may-2002","27-may-2002",6000);
-         m.addHotel("Hyatt Regency",6000,"20-jan-2002","11-feb-2002","25-jan-2002","26-jan-2002",7000);
-         m.addHotel("JW Marriott International",4000,"22-nov-2002","22-dec-2002","10-dec-2002","11-dec-2002",5000);
+
+         m.addHotel("LakeWood",20000,"20-may-2002","21-july-2002","26-may-2002","27-may-2002",5000,3);
+         m.addHotel("BridgeWood",4000,"20-may-2002","21-july-2002","26-may-2002","27-may-2002",3500,4);
+         m.addHotel("RidgeWood",5000,"20-jan-2002","11-feb-2002","25-jan-2002","26-jan-2002",6500,5);
+
      }
 
 
