@@ -8,10 +8,10 @@ import static org.junit.jupiter.api.Assertions.*;
 class HotelreservationTest
 {
         @Test
-        public void testAdd(){
+        public void testAdd()
+        {
         Main m = new Main();
         Assert.assertTrue(m.addHotel("Oberoi",20000));
         Assert.assertTrue( m.addHotel("TajLand Ends Delhi",4000));
-
-    }
+        }
 }

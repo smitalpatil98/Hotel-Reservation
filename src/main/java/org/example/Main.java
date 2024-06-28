@@ -8,7 +8,8 @@ class Hotelreservation
     String name;
     long hotel_Regular_Price;
 
-    Hotelreservation(String Name, long Hotel_Regular_Price) {
+    Hotelreservation(String Name, long Hotel_Regular_Price)
+    {
         this.name = Name;
         this.hotel_Regular_Price = Hotel_Regular_Price;
     }
@@ -16,7 +17,6 @@ class Hotelreservation
     @Override
     public String toString()
     {
-
         return "Hotel reservation{" + "name='" + name + '\'' + ", hotel_Regular_Price=" + hotel_Regular_Price + '}';
     }
 }
