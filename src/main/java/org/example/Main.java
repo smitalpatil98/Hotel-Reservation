@@ -45,18 +45,21 @@ class Hotelreservation
     static List<Hotelreservation> hotelreservationList = new ArrayList<>();
     static Scanner sc = new Scanner(System.in);
 
-     static String cheapesthotel(String Start_Date,String End_Date)
+
+     static String cheapesthotel(String Start_Date,String End_Date, String start_week , String end_week , long week_price)
      {
          long min = Integer.MAX_VALUE;
+         long min1 = Integer.MAX_VALUE;
          String name = null;
 
          for (Hotelreservation hotels : hotelreservationList)
          {
-             if (Start_Date.equals(hotels.start_date) && End_Date.equals(hotels.end_date))
+             if (Start_Date.equals(hotels.start_date) && End_Date.equals(hotels.end_date)&& start_week.equals(hotels.start_week) && end_week.equals(hotels.end_week))
              {
-                 if (hotels.hotel_Regular_Price < min)
+                 if (hotels.hotel_Regular_Price < min && hotels.week_price < min1)
                  {
                      min = hotels.hotel_Regular_Price;
+                     min1 = hotels.week_price;
                      name = hotels.name;
                  }
              }
@@ -84,4 +87,6 @@ class Hotelreservation
          m.addHotel("Hyatt Regency",6000,"20-jan-2002","11-feb-2002","25-jan-2002","26-jan-2002",7000);
          m.addHotel("JW Marriott International",4000,"22-nov-2002","22-dec-2002","10-dec-2002","11-dec-2002",5000);
      }
+
+
  }
