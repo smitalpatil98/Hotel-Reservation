@@ -53,6 +53,7 @@ class Hotelreservation
      {
          long min = Integer.MAX_VALUE;
          long min1 = Integer.MAX_VALUE;
+         double flag = 0;
          String name = null;
 
          for (Hotelreservation hotels : hotelreservationList)
@@ -64,6 +65,8 @@ class Hotelreservation
                      min = hotels.hotel_Regular_Price;
                      min1 = hotels.week_price;
                      name = hotels.name;
+                     flag = hotels.ratings;
+
                  }
              }
          }
@@ -87,7 +90,7 @@ class Hotelreservation
          Main m = new Main();
 
          m.addHotel("LakeWood",20000,"20-may-2002","21-july-2002","26-may-2002","27-may-2002",5000,3);
-         m.addHotel("BridgeWood",4000,"20-may-2002","21-july-2002","26-may-2002","27-may-2002",3500,4);
+         m.addHotel("BridgeWood",4000,"11-september-2020","12-september-2020","26-may-2002","27-may-2002",2000,4);
          m.addHotel("RidgeWood",5000,"20-jan-2002","11-feb-2002","25-jan-2002","26-jan-2002",6500,5);
 
      }
