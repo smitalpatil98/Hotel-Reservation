@@ -9,7 +9,6 @@ class Hotelreservation
     long hotel_Regular_Price;
     String start_date;
     String end_date;
-
     String start_week;
     String end_week;
     long week_price;
@@ -70,7 +69,7 @@ class Hotelreservation
                  }
              }
          }
-         return name;
+         return name +" "+min;
      }
      static Boolean addHotel(String name, long hotel_Regular_Price,String start_date,String end_date, String start_week , String end_week , long week_price , double ratings)
      {
@@ -90,10 +89,8 @@ class Hotelreservation
          Main m = new Main();
 
          m.addHotel("LakeWood",20000,"20-may-2002","21-july-2002","26-may-2002","27-may-2002",5000,3);
-         m.addHotel("BridgeWood",4000,"11-september-2020","12-september-2020","26-may-2002","27-may-2002",2000,4);
-         m.addHotel("RidgeWood",5000,"20-jan-2002","11-feb-2002","25-jan-2002","26-jan-2002",6500,5);
+         m.addHotel("RidgeWood",4000,"11-september-2020","12-september-2020","26-may-2002","27-may-2002",2000,4);
+         m.addHotel("BridgeWood",5000,"20-jan-2002","11-feb-2002","25-jan-2002","26-jan-2002",6500,5);
 
      }
-
-
  }
