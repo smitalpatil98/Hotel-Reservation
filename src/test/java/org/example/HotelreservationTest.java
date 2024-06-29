@@ -26,6 +26,6 @@ class HotelreservationTest
                 String str = m.cheapesthotel(1,"11-september-2020","12-september-2020");
                 String str1 = m.cheapesthotel(4,"11-september-2020","12-september-2020");
                 Assert.assertEquals("RidgeWood 110", str );
-               // System.out.println(str);
+                //System.out.println(str);
         }
 }
